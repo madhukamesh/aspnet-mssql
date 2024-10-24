@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        projects: ['dotnet']
+        projects: ['/app/aspnetapp']
 
     steps:
       # Step 1: Checkout/download the repository code
