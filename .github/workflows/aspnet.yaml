@@ -51,7 +51,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/madhukamesh/${{ github.repository }}
+            ghcr.io/madhukamesh/dotnet
           tags: |
             ${{ github.sha }}
             type=ref,event=branch
@@ -62,6 +62,6 @@ jobs:
       - name: Build and Push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./app/dotnet
+          context: ./app/aspnetapp
           push: true
           tags: ${{ steps.meta.outputs.tags }}
